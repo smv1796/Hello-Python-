@@ -1,5 +1,5 @@
 import numpy as np
-
+from datetime import datetime
 #Starting of function definitions
 
 def magnitude(a):
@@ -9,6 +9,14 @@ def magnitude(a):
     mag=np.sqrt(mag)
     return mag
 
+def dotProduct(A,B):
+    dotP=0
+    for e,f in zip(A,B):
+        dotP+=e*f
+    return dotP
+
+def diffinmethods(A,B):
+    T=1000000
 
 
 
@@ -69,4 +77,14 @@ magb=np.linalg.norm(b)
 costheta=(np.dot(a,b))/(maga*magb)
 print("The cosine of the angle b/w two vectors is",costheta)
 
-print("The angle in radians is", np.arccos(costheta))
+#Example problem
+A=np.array([[1.5,4.0],[1,1]])
+B=np.array([5050,2200])
+X=np.linalg.solve(A,B)
+print(X[0])
+
+# Comparing dot product methods
+
+a = np.random.randn(100)
+b = np.random.randn(100)
+diffinmethods(a,b)
