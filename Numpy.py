@@ -1,7 +1,7 @@
 import numpy as np
 from datetime import datetime
 #Starting of function definitions
-
+'''
 def magnitude(a):
     mag=0
     for e in a:
@@ -102,4 +102,15 @@ print(X[0])
 
 a = np.random.randn(100)
 b = np.random.randn(100)
-diffinmethods(a,b)
+#diffinmethods(a,b)
+
+#Matrix multiplication
+'''
+m1=np.array([[1,2,3],[1,2,3],[1,2,3]])
+m2=np.array([[2,13],[9,0,1]])
+
+#print(np.dot(m1,m2))
+#print(np.outer(m1,m2))
+#print(np.trace(m1)
+print(np.linalg.inv(m1))
+
