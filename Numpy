@@ -16,8 +16,23 @@ def dotProduct(A,B):
     return dotP
 
 def diffinmethods(A,B):
-    T=1000000
+    T=1000
 
+    tb=datetime.now()
+    for r in range(T):
+        dotProduct(A,B)
+    te=datetime.now()
+
+    duration1=te-tb
+
+    tb=datetime.now()
+    for r in range(T):
+        np.dot(A,B)
+    te=datetime.now()
+
+    duration2=te-tb
+
+    print("Predefined dot is", duration1/duration2,'times faster than our method for calculating dot product')
 
 
 
