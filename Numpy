@@ -1,0 +1,72 @@
+import numpy as np
+
+#Starting of function definitions
+
+def magnitude(a):
+    mag=0
+    for e in a:
+        mag+=e**2
+    mag=np.sqrt(mag)
+    return mag
+
+
+
+
+
+#
+
+L=[1,2,3]
+A=np.array(L)
+
+for ele in L:
+    print(ele)
+
+
+for ele in A:
+   print(ele)
+
+L.append(17)
+
+print(L)
+L=L+L
+#print(L)
+
+A=A+A
+#print(A)
+
+
+a=np.array([1,2])
+b=np.array([2,1])
+result=0;
+for e1,e2 in zip(a,b):
+    result+=e1*e2
+
+print("result is:",result)
+
+r=a*b;
+dotP=0
+for e in r:
+    dotP+=e
+
+print(dotP)
+
+# numpy has predefined function to calculate dot product
+
+print(np.dot(a,b))
+
+#Finding the angle b/w two vectors
+
+maga=np.linalg.norm(a)
+maga1=magnitude(a)
+
+if maga==maga1:
+        print("Both the methods produce same result")
+else:
+    print("Methods prodeuce different result")
+
+magb=np.linalg.norm(b)
+
+costheta=(np.dot(a,b))/(maga*magb)
+print("The cosine of the angle b/w two vectors is",costheta)
+
+print("The angle in radians is", np.arccos(costheta))
